@@ -18,10 +18,13 @@ namespace WBBS_2
             InitializeComponent();
             tabPage1.Parent = null;
             tabPage2.Parent = null;
+            tabPage3.Parent = null;
+            tabPage4.Parent = null;
             MoveToStart();
         }
         WebBrowser web = new WebBrowser();// создаем webbrowser
         int i = 0;
+        int n = 0;
         // по двойному щелчку мыши активируем новую вкладку
         private void tabControl1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -286,6 +289,9 @@ namespace WBBS_2
             {
                 e.SuppressKeyPress.ToString();
                 ((WebBrowser)tabControl1.SelectedTab.Controls[0]).Navigate(adress.Text);
+                
+                
+                //web.Navigate("http://yandex.ru/search/?lr=213&text=" + adress.Text + "&suggest_reqid=722156446143055714248672459210016");
             }
         }
         // по двойному щелчку, ревлизуем переход на выбранную страницу
@@ -440,7 +446,12 @@ namespace WBBS_2
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Close();
+            if (tabPage3.Parent == null)
+            {
+                i++;
+                panel2.Visible = false;
+                tabPage3.Parent = tabControl1;
+            }
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -461,6 +472,196 @@ namespace WBBS_2
                 tabControl1.SelectTab(tabControl1.TabPages.Count - 1);
                 i -= 1;
             }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (listBox2.SelectedItem != null)
+            {
+                listBox2.Items.RemoveAt(listBox2.SelectedIndex);
+            }
+            else
+            {
+                MessageBox.Show("Выберите значение");
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            panel4.BackgroundImage = new Bitmap(pictureBox10.Image);
+            panel5.BackgroundImage = new Bitmap(pictureBox10.Image);
+            panel6.BackgroundImage = new Bitmap(pictureBox10.Image);
+            pictureBox10.Visible = false;
+            pictureBox11.Visible = true;
+            pictureBox12.Visible = true;
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            panel4.BackgroundImage = new Bitmap(pictureBox11.Image);
+            panel5.BackgroundImage = new Bitmap(pictureBox11.Image);
+            panel6.BackgroundImage = new Bitmap(pictureBox11.Image);
+            pictureBox10.Visible = true;
+            pictureBox11.Visible = false;
+            pictureBox12.Visible = true;
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            panel4.BackgroundImage = new Bitmap(pictureBox12.Image);
+            panel5.BackgroundImage = new Bitmap(pictureBox12.Image);
+            panel6.BackgroundImage = new Bitmap(pictureBox12.Image);
+            pictureBox12.Visible = false;
+            pictureBox10.Visible = true;
+            pictureBox11.Visible = true;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+            web.Navigate("http://yandex.ru/search/?lr=213&text=" + adress.Text + "&suggest_reqid=722156446143055714248672459210016");
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            if (tabPage4.Parent == null)
+            {
+                i++;
+                panel2.Visible = false;
+                tabPage4.Parent = tabControl1;
+                comboBox1.Text = "";
+            }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+                adress.Text = comboBox1.Text;
+                web = new WebBrowser();
+                web.NewWindow += web_NewWindow;
+                web.ScriptErrorsSuppressed = true;
+                web.Dock = DockStyle.Fill;
+                web.Visible = true;
+                web.DocumentCompleted += web_DocumentCompleted;
+                tabControl1.TabPages.Add("Новая вкладка");
+                tabControl1.SelectTab(i);
+                tabControl1.SelectedTab.Controls.Add(web);   
+                web.Navigate("http://yandex.ru/search/?lr=213&text=" + adress.Text + "&suggest_reqid=722156446143055714248672459210016");
+                i++;  
+                tabPage4.Parent = null;
+        }
+
+        private void comboBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress.ToString();
+                adress.Text = comboBox1.Text;
+                tabPage4.Parent = null;
+                TabPage tabPage = new TabPage();
+                web = new WebBrowser();
+                web.NewWindow += web_NewWindow;
+                web.ScriptErrorsSuppressed = true;
+                web.Dock = DockStyle.Fill;
+                web.Visible = true;
+                web.DocumentCompleted += web_DocumentCompleted;
+                tabControl1.TabPages.Add(tabPage);
+                tabControl1.SelectTab(tabPage);
+                web.Navigate("http://yandex.ru/search/?lr=213&text=" + adress.Text + "&suggest_reqid=722156446143055714248672459210016");
+                tabControl1.SelectedTab.Controls.Add(web);
+            }
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            tabPage4.Parent = null;
+            TabPage tabPage = new TabPage();
+            web = new WebBrowser();
+            web.NewWindow += web_NewWindow;
+            web.ScriptErrorsSuppressed = true;
+            web.Dock = DockStyle.Fill;
+            web.Visible = true;
+            web.DocumentCompleted += web_DocumentCompleted;
+            tabControl1.TabPages.Add(tabPage);
+            tabControl1.SelectTab(tabPage);
+            tabControl1.SelectedTab.Controls.Add(web);
+            web.Navigate("http://yandex.ru");
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            tabPage4.Parent = null;
+            TabPage tabPage = new TabPage();
+            web = new WebBrowser();
+            web.NewWindow += web_NewWindow;
+            web.ScriptErrorsSuppressed = true;
+            web.Dock = DockStyle.Fill;
+            web.Visible = true;
+            web.DocumentCompleted += web_DocumentCompleted;
+            tabControl1.TabPages.Add(tabPage);
+            tabControl1.SelectTab(tabPage);
+            tabControl1.SelectedTab.Controls.Add(web);
+            web.Navigate("http://google.ru/");
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            tabPage4.Parent = null;
+            TabPage tabPage = new TabPage();
+            web = new WebBrowser();
+            web.NewWindow += web_NewWindow;
+            web.ScriptErrorsSuppressed = true;
+            web.Dock = DockStyle.Fill;
+            web.Visible = true;
+            web.DocumentCompleted += web_DocumentCompleted;
+            tabControl1.TabPages.Add(tabPage);
+            tabControl1.SelectTab(tabPage);
+            tabControl1.SelectedTab.Controls.Add(web);
+            web.Navigate("http://rambler.ru/");
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+            tabPage4.Parent = null;
+            TabPage tabPage = new TabPage();
+            web = new WebBrowser();
+            web.NewWindow += web_NewWindow;
+            web.ScriptErrorsSuppressed = true;
+            web.Dock = DockStyle.Fill;
+            web.Visible = true;
+            web.DocumentCompleted += web_DocumentCompleted;
+            tabControl1.TabPages.Add(tabPage);
+            tabControl1.SelectTab(tabPage);
+            tabControl1.SelectedTab.Controls.Add(web);
+            web.Navigate("http://ozon.ru/");
+        }
+
+        private void pictureBox18_Click(object sender, EventArgs e)
+        {
+            tabPage4.Parent = null;
+            TabPage tabPage = new TabPage();
+            web = new WebBrowser();
+            web.NewWindow += web_NewWindow;
+            web.ScriptErrorsSuppressed = true;
+            web.Dock = DockStyle.Fill;
+            web.Visible = true;
+            web.DocumentCompleted += web_DocumentCompleted;
+            tabControl1.TabPages.Add(tabPage);
+            tabControl1.SelectTab(tabPage);
+            tabControl1.SelectedTab.Controls.Add(web);
+            web.Navigate("http://aliez.tv/");
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            listBox2.Items.Clear();
+            string del = "history.txt";
+            File.AppendAllText("Empty.txt", "");
+            File.Replace("Empty.txt",del, "copy.txt");
         }
     }
 }

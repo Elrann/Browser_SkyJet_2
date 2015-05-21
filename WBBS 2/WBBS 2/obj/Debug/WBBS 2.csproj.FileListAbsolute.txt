@@ -7,3 +7,12 @@ Z:\3-АиСн-4\4 семестр\ТП\WBBS 2\WBBS 2\obj\Debug\WBBS_2.Properties.
 Z:\3-АиСн-4\4 семестр\ТП\WBBS 2\WBBS 2\obj\Debug\WBBS 2.csproj.GenerateResource.Cache
 Z:\3-АиСн-4\4 семестр\ТП\WBBS 2\WBBS 2\obj\Debug\WBBS 2.exe
 Z:\3-АиСн-4\4 семестр\ТП\WBBS 2\WBBS 2\obj\Debug\WBBS 2.pdb
+C:\Users\Виталий\Desktop\WBBS 2\WBBS 2\bin\Debug\WBBS 2.exe.config
+C:\Users\Виталий\Desktop\WBBS 2\WBBS 2\obj\Debug\WBBS 2.exe
+C:\Users\Виталий\Desktop\WBBS 2\WBBS 2\obj\Debug\WBBS 2.pdb
+C:\Users\Виталий\Desktop\WBBS 2\WBBS 2\bin\Debug\WBBS 2.exe
+C:\Users\Виталий\Desktop\WBBS 2\WBBS 2\bin\Debug\WBBS 2.pdb
+C:\Users\Виталий\Desktop\WBBS 2\WBBS 2\obj\Debug\WBBS 2.csprojResolveAssemblyReference.cache
+C:\Users\Виталий\Desktop\WBBS 2\WBBS 2\obj\Debug\WBBS_2.Form1.resources
+C:\Users\Виталий\Desktop\WBBS 2\WBBS 2\obj\Debug\WBBS_2.Properties.Resources.resources
+C:\Users\Виталий\Desktop\WBBS 2\WBBS 2\obj\Debug\WBBS 2.csproj.GenerateResource.Cache

@@ -1,0 +1,12 @@
+22.05.2015 0:52:59           http://www.yandex.ru/
+22.05.2015 0:53:32           http://www.yandex.ru/
+22.05.2015 0:54:08           http://www.yandex.ru/
+22.05.2015 0:54:14           http://vk.com/feed
+22.05.2015 0:54:16           http://vk.com/feed#/im
+22.05.2015 0:54:24           http://vk.com/feed#/im?sel=c25
+22.05.2015 0:56:15           http://vk.com/feed#/im?sel=c25&z=photo79460742_367096667%2Fmail193824
+22.05.2015 0:56:17           http://vk.com/feed#/im?sel=c25
+22.05.2015 0:59:44           http://www.yandex.ru/
+22.05.2015 1:00:03           http://news.yandex.ru/yandsearch?cl4url=ria.ru/world/20150521/1065838325.html&lang=ru&lr=37147
+22.05.2015 1:00:27           http://www.yandex.ru/
+22.05.2015 1:01:25           http://www.yandex.ru/
