@@ -1,0 +1,9 @@
+Z:\3-АиСн-4\4 семестр\ТП\WBBS 2\WBBS 2\bin\Debug\WBBS 2.exe.config
+Z:\3-АиСн-4\4 семестр\ТП\WBBS 2\WBBS 2\bin\Debug\WBBS 2.exe
+Z:\3-АиСн-4\4 семестр\ТП\WBBS 2\WBBS 2\bin\Debug\WBBS 2.pdb
+Z:\3-АиСн-4\4 семестр\ТП\WBBS 2\WBBS 2\obj\Debug\WBBS 2.csprojResolveAssemblyReference.cache
+Z:\3-АиСн-4\4 семестр\ТП\WBBS 2\WBBS 2\obj\Debug\WBBS_2.Form1.resources
+Z:\3-АиСн-4\4 семестр\ТП\WBBS 2\WBBS 2\obj\Debug\WBBS_2.Properties.Resources.resources
+Z:\3-АиСн-4\4 семестр\ТП\WBBS 2\WBBS 2\obj\Debug\WBBS 2.csproj.GenerateResource.Cache
+Z:\3-АиСн-4\4 семестр\ТП\WBBS 2\WBBS 2\obj\Debug\WBBS 2.exe
+Z:\3-АиСн-4\4 семестр\ТП\WBBS 2\WBBS 2\obj\Debug\WBBS 2.pdb
